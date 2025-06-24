@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        canvas example    </title>
+</head>
+<body>
+    <h1>html canvas example</h1>
+    <canvas
+        id="my_canvas"
+        width="500"
+        height="500"
+        style="border:9px solid red">
+    </canvas>
+    <script>
+        const canvas=document.getElementById("my_canvas");
+        const ctx=canvas.getContext("2d")
+        // draw a rectangle
+        ctx.fillStyle="blue";
+        ctx.fillRect(120,50,200,100);
+        // draw a circle
+        ctx.beginPath();
+        ctx.arc(220,250,150,0,2*Math.PI);
+        ctx.fillStyle="red";
+        ctx.fill();
+        // draw a line
+        ctx.beginPath();
+        ctx.moveTo(60,400);
+        ctx.lineTo(380,400);
+        ctx.StrokeStyle="green";
+        ctx.linewidth=8;
+        ctx.stroke();
+        // New path begin
+        ctx.beginPath();
+        ctx.StrokeStyle="blue";
+        ctx.moveTo(380,50);
+        ctx.lineTo(380,400);
+        ctx.stroke();
+        // new line
+        ctx.beginPath();
+        ctx.moveTo(60,50);
+        ctx.lineTo(380,50);
+        ctx.StrokeStyle="yellow";
+        ctx.linewidth=8;
+        ctx.stroke();
+        // new path begin
+        ctx.beginPath();
+        ctx.StrokeStyle="blue";
+        ctx.moveTo(60,50);
+        ctx.lineTo(60,400);
+        ctx.stroke();
+        
+        </script>
+</body>
+</html>

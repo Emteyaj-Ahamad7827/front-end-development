@@ -1,0 +1,14 @@
+.contain{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    padding: 50px;
+    border: 2px solid red;
+    margin:100px;
+    color: purple;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    
+    
+}

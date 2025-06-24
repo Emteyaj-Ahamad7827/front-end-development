@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html form</title>
+    <style>
+        body{
+            background-color: red;
+            color: greenyellow;
+        }
+        fieldset{
+            background-color: white;
+            color: black;
+        }
+        label{
+            text-transform: uppercase;
+            color: black;
+        }
+        h1{
+            background-color: blue;
+            color: white;
+            text-transform: uppercase;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>fill your details below</h1>
+    <fieldset>
+        <legend style="text-transform: capitalize;font-size: x-large;font-weight: bolder;">form</legend>
+        <form class="form">
+            <label>name</label>
+            <input required type="text" placeholder="enter the name"/><br>
+            <label>email</label>
+            <input required type="email" placeholder="enter the mail"> <br>
+            <fieldset>
+                <legend>gender</legend>
+                <label>male</label>
+                <input required type="radio" placeholder="enter the name"/>
+                <label>female</label>
+                <input required type="radio" placeholder="enter the name"><br>
+                </fieldset>
+                <fieldset><br>
+                    <label>phone</label>
+                    <input required type="tel" placeholder="enter the number"><br>
+                    <label >country</label>
+                    <select>
+                        <option value="india">india</option>
+                        <option>saudi arbia</option>
+                        <option> palestine</option>
+                    </select><br>
+                    <label>address</label>
+                    <textarea cols="30" rows="2" placeholder="enter the area"></textarea> <br>
+                    <label >time</label>
+                    <input type="time">
+                    <label >date</label>
+                    <input type="date">
+                    <label >check box</label>
+                    <input type="checkbox">
+                    <input type="color">
+                    <input type="url">
+                    <input type="file">
+                    <button type="submit">submit</button>
+                </fieldset>
+                
+            
+        </form>
+    </fieldset>
+</body>
+</html>

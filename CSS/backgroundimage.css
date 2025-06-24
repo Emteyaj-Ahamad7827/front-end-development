@@ -1,0 +1,18 @@
+/* body{
+    height: 100vh;
+} */
+.img {
+    border: 1px solid red;
+    height: 100vh;
+    /* width: 100vh; */
+    background-image: url(https://imgs.search.brave.com/k40r7s0uYMIGQZqMNzAHndsvtECenRs9-JSaGzMmQ6I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzE0LzYwLzkxLzMw/LzM2MF9GXzE0NjA5/MTMwNzVfVmxMQmht/STBHOWhhOFNEb3Zr/Tm1NUFZwVFIydXdJ/R0ouanBn);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    
+}
+h1{
+    text-align: center;
+    color: white;
+    
+}
