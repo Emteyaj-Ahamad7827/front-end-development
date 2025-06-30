@@ -15,3 +15,8 @@
     width: calc(var(--width) + var(--width-1));
     height: calc(var(--height-1) + var(--height));
 }
+.container_2 {
+    border: 1px solid blue;
+    width: calc(var(--width) + var(--width-1));
+    height: calc(var(--height-1) + var(--height));
+}
