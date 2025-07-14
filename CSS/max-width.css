@@ -1,0 +1,10 @@
+.div-x{
+    border: 1px solid red;
+    width: 800px;
+    text-align: center;
+}
+.div-y{
+    border: 1px solid black;
+    max-width: 800px;
+    text-align: center;
+}
