@@ -3,14 +3,16 @@
     padding: 0;
 }
 .parent{
-    width: 100%;
+    width: 97%;
     height: 80px;
+    margin: auto;
     /* border: 2px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: antiquewhite; */
-    background-color: black;
+    background-color: transparent;
+    justify-content: space-between;
 
 }
 .child_1{
@@ -62,6 +64,8 @@ h3{
      display: flex;
      border: none;
      padding: 0 10px;
+     border: 1px solid black;
+     border-radius: 20px;
      
 }
 .search > img{
@@ -76,9 +80,10 @@ h3{
     border: none;
     width: 95%;
     padding: 10px;
+    /* border: 1px solid red; */
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    outline: none;
+    /* outline: none; */
 }
 .child_3{
     width: 33%;
