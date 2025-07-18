@@ -6,7 +6,7 @@
     width: 97%;
     height: 80px;
     margin: auto;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +46,8 @@
 h3{
     color: black;
     position: absolute;
-    margin-left: 150px;
+    margin-left: 170px;
+    font-weight: bolder;
 }
 .child_2{
     width: 33%;
@@ -85,20 +86,26 @@ h3{
     border-bottom-left-radius: 10px;
     /* outline: none; */
 }
-.child_3{
-    width: 33%;
-    height: 60px;
+.child_3 {
+    /* width: 33%; */
+    /* height: 60px; */
     /* border: 2px solid black; */
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
 
     
-    flex-wrap: wrap;
-    align-content: center;
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
     /* background-color: cornsilk; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
-.input_3 > img{
+img{
+    width: 50px;
+    height: 50px;
+}
+/* .input_3 > img{
     height: 50px;
     width: 50px;
     
@@ -117,4 +124,13 @@ h3{
     height: 50px;
     width: 35px;
     
+} */
+.select-tag{
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.select-tag:hover{
+    border: 1px solid red;
+    color: blue;
+    block-size: none;
 }
