@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    width: 97%;
+    height: 80px;
+    margin: auto;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    background-color: rgb(248, 243, 243);
+    justify-content: space-between;
+
+}
+.child_1{
+    width: 300px;
+    height: 60px;
+    /* border: 2px solid black; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    outline: none;
+    /* background-color: cornsilk; */
+    /* background-color: transparent; */
+    border-radius: 10px;
+    
+    
+}
+.input > img{
+    height: 40px;
+    width: 35px;
+    margin-left: 10px;
+    display: flex;
+
+}
+.input_1 > img{
+    height: 50px;
+    width: 35px;
+    margin-left: 200%;
+    position: relative;
+
+}
+h3{
+    color: black;
+    position: absolute;
+    margin-left: 170px;
+    font-weight: bolder;
+}
+.child_2{
+    width: 33%;
+    height: 60px;
+    /* border: 2px solid black; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: aliceblue; */
+    border-radius: 10px;
+}
+.search{
+     
+     width:100%;
+     display: flex;
+     border: none;
+     padding: 0 0;
+     border: 1px solid black;
+     border-radius: 10px;
+     
+}
+.search > img{
+     height: 30px;
+     padding: 10px;
+    width: 35px;
+    /* background-color: rgb(224, 213, 213); */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 10px;
+}
+.search input{
+    border: none;
+    width: 95%;
+    padding: 10px;
+    /* border: 1px solid red; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* outline: none; */
+}
+.child_3 {
+    /* width: 33%; */
+    /* height: 60px; */
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 20px;
+
+    
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+    /* background-color: cornsilk; */
+    /* border-radius: 10px; */
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+/* .input_3 > img{
+    height: 50px;
+    width: 50px;
+    
+    
+}
+.input_4 > img{
+    height: 50px;
+    width: 35px;
+    
+}
+.input_5 > img{
+    height: 50px;
+    width: 35px;
+}
+.input_6 > img{
+    height: 50px;
+    width: 35px;
+    
+} */
+.select-tag{
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.select-tag:hover{
+    border: 1px solid red;
+    color: blue;
+    block-size: none;
+}

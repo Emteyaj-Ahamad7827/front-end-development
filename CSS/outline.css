@@ -1,0 +1,39 @@
+body{
+    height: 90vh;
+    border: 1px solid red;
+}
+.container,img{
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    margin: 10px;
+    padding: 10px;
+    border: 10px solid green;
+    outline: 15px;
+    outline-offset: 20px;
+    outline-color: red;
+    outline-style: solid;
+    box-shadow: 20px 20px 50px 50px rgb(62, 167, 144);
+    }
+img{
+    
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(10px 10px 30px);
+    animation: mymove linear infinite;
+}
+@keyframes mymove{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

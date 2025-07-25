@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .container{
+    border: 1px solid red;
+    height: 90vh;
+    gap: 10 px;
+    display: flex;
+    align-items: center;
+} */
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    color: white;
+    border: 1px solid red;
+    margin: 20px;
+    text-align: center;
+    line-height: 100px;
+    transition: transform 1s ease;
+}
+.child_1:hover{
+    transform: translate(50px, 50px);
+}
+.child_2:hover{
+    transform: rotate(60deg);
+}
+.child_3:hover{
+    transform: scale(1.5);
+}
+.child_4:hover{
+    transform: skew(10deg, 20deg);
+}

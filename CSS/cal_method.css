@@ -1,0 +1,22 @@
+:root{
+    --width: 100px;
+    --width-1: 200px;
+    --height: 200px;
+    --height-1: 300px
+
+}
+.container {
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+}
+.container_1{
+    border: 1px solid greenyellow;
+    width: calc(var(--width) + var(--width-1));
+    height: calc(var(--height-1) + var(--height));
+}
+.container_2 {
+    border: 1px solid blue;
+    width: calc(var(--width) + var(--width-1));
+    height: calc(var(--height-1) + var(--height));
+}

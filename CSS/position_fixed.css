@@ -1,0 +1,24 @@
+
+.containt{
+    position: relative;
+    top: 20px;
+    left: auto;
+    width: 100%;
+    background-color: red;
+    color: white;
+    
+    position: fixed;
+}
+body{
+    border: 3px solid green;
+    height: 300vh;
+}
+img{
+    position: absolute;
+    top: inherit;
+    position: fixed;
+    height: 200px;
+    width: inherit;
+    margin-left: 40%;
+    border: 2px solid red;
+}

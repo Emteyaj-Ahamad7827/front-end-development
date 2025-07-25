@@ -1,0 +1,52 @@
+*{margin-top: 0px;
+    padding: 50px;
+    
+    box-sizing: border-box;
+
+}
+h1{margin-top: 300px;
+    padding: 50px;
+    
+    border: 2px solid red;
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: xx-large;
+    background: linear-gradient(to left, red, blue);
+    /* background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    
+}
+.contianer{
+    /* margin-top: 300px; */
+    background: linear-gradient(to right, yellow, green);
+}
+.radial{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle,red,yellow,blue);
+    
+    border: 2px solid red;
+}
+.repeating{
+    width: 200px;
+    height: 200px;
+    background:  repeating-radial-gradient(circle,red,yellow 10%,blue 15%);
+    border: 2px solid red;
+}
+.conic{
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(from 0deg at center,
+    red,
+    yellow,
+    green,
+    blue,
+    red);
+    border-radius: 50%;
+    border: 1px solid red;
+}

@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.parent{
+    
+    height: 60px;
+    
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* background-color: #ebe8e8; */
+}
+.child_1{
+    width: 20%;
+    height: 56px;
+    
+    display: flex;
+    align-items: center;
+    
+    
+}
+.img > img{
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    position: relative;
+    
+}
+/* .home{
+    opacity: 0; 
+     visibility: hidden; 
+     position: absolute;
+    top: 45px;
+    left: 25px;
+    background-color: transparent;
+    border: 1px solid green;
+    padding: 5px 10px;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+    text-transform: capitalize;
+} */
+.img:hover .home{
+    opacity: 1;
+    visibility: visible;
+}
+img:hover{
+    scale: 1;
+    cursor: pointer;
+    border: 1px solid rgb(212, 212, 107);
+    /* background-color: aqua; */
+}
+.img_1 > img{
+    width: 100px;
+    height: 60px;
+    /* padding: 8px; */
+    margin-left: 20px;
+    
+}
+.child_2{
+    width: 50%;
+    height: 56px;
+    margin-right: 20px;
+    padding: 0px 4px;
+    
+    display: flex;
+    align-items: center;
+}
+.search{
+    width:100%;
+    height: 40px;
+     display: flex;
+     border: 2px solid black;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
+     
+    }
+    input{
+        outline: none;
+        border: none;
+        width: inherit; 
+        padding-left: 10px;
+      border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;  
+    }
+    button{
+    width: 100px;
+    height: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+button > img{
+    width: 24px;
+    height: 24px;
+}
+.input_1 > img{
+    width: 45px;
+    height: 40px;
+    margin-top: 4px;
+    /* border: 2px solid black; */
+    border-radius: 50%;
+    top: 5px;
+    
+
+}
+.home, .voice, .notification, .profile{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    text-transform: capitalize;
+    border: 1px solid black;
+    text-align: right;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: gray;
+    color: white;
+    /* z-index: 10; */
+    /* cursor: pointer; */
+
+}
+.home::before{
+    content: '';
+    position: relative;
+    top: -27px;
+    left: 20px;
+    rotate: 360deg;
+    border-width: 4px;
+    border-style: solid;
+    z-index: 5;
+    border-color: transparent transparent black transparent;
+}
+ .input_1:hover .voice{ 
+        opacity: 1;
+        visibility: visible;
+        border: 1px solid black;
+} 
+.child_3{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    
+    align-items: center;
+    
+    flex-wrap: wrap;
+    align-content: center;
+
+    
+
+}
+
+
+.input_2 {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+p{
+    width: 15px;
+    height: 25px;
+    font-weight: bolder;
+    font-size: x-large;
+}
+h3{
+    margin-top: 10px;
+    width: 60px;
+    height: 40px;
+    font-size: x-large;
+}
+.input_3 > img{
+    width: 50px;
+    height: 40px;
+
+}
+/* .notification{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    text-transform: capitalize;
+    border: 1px solid black;
+    text-align: right;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+
+} */
+.input_3:hover .notification{
+    opacity: 1;
+    visibility: visible;
+}
+.input_4 > img{
+    width: 50px;
+    height: 40px;
+
+}
+/* .profile{
+    opacity: 0; 
+     visibility: hidden; 
+     position: absolute;
+    top: 50px;
+    right: 30px;
+    text-align: right;
+    background-color: transparent;
+    text-transform: capitalize;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+} */
+.input_4:hover .profile{
+    opacity: 1;
+    visibility: visible;
+}
