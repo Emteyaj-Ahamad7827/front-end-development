@@ -51,7 +51,7 @@
  
 
 
-.tooltip::before{
+.tooltip::after{
     content: '';
     position: absolute;
     top: 50px;

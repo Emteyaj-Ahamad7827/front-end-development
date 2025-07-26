@@ -1,29 +1,29 @@
-*{margin-top: 0px;
+*{
+    margin-top: 0px;
     padding: 50px;
     
     box-sizing: border-box;
-
-}
-h1{margin-top: 300px;
-    padding: 50px;
-    
-    border: 2px solid red;
-    
-    text-align: center;
-    text-transform: uppercase;
-    font-style: italic;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: xx-large;
-    background: linear-gradient(to left, red, blue);
-    /* background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    
 }
 .contianer{
-    /* margin-top: 300px; */
-    background: linear-gradient(to right, yellow, green);
+    margin-top: 300px;
+    background: linear-gradient(to right, yellow, green, red);
+    padding: 40px 0;
+
 }
+h1{
+    text-transform: capitalize;
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid red;
+    /* color: red; */
+    background: linear-gradient(to bottom red, blue);
+    /* background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    
+}
+
 .radial{
     width: 200px;
     height: 200px;
@@ -34,6 +34,7 @@ h1{margin-top: 300px;
 .repeating{
     width: 200px;
     height: 200px;
+    border-radius: 50%;
     background:  repeating-radial-gradient(circle,red,yellow 10%,blue 15%);
     border: 2px solid red;
 }

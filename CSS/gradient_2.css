@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-top: 300px;
+    padding: 40px;
+
+    border: 1px solid black;
+    background: linear-gradient(to right bottom, red, blue, pink);
+    text-align: center;
+
+}
+h1{
+    font-size: 70px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: bold;
+    background: linear-gradient(to top, yellow, aqua, green);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+h2{
+    text-transform: capitalize;
+    background: linear-gradient(red, blue);
+}
