@@ -22,7 +22,7 @@
     transition: transform 1s ease;
 }
 .child_1:hover{
-    transform: translate(50px, 50px);
+    transform: translate(100px, 100px);
 }
 .child_2:hover{
     transform: rotate(60deg);
@@ -32,4 +32,8 @@
 }
 .child_4:hover{
     transform: skew(10deg, 20deg);
+}
+.child_4{
+    display: flex;
+    background-size: cover;
 }

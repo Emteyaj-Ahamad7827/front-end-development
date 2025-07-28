@@ -4,9 +4,8 @@
 }
 .parent{
     width: 97%;
-    height: 80px;
+    height: 60px;
     margin: auto;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
