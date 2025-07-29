@@ -19,9 +19,9 @@
     grid-template-columns: repeat(3,1fr);
 
      grid-template-areas:
-    'pic_8 pic_5 pic_3'
+    'pic_1 pic_5 pic_3'
     'pic_4 pic_2 pic_6'
-    'pic_7 pic_1 .'; 
+    'pic_7 pic_8 .'; 
 
     
  }
@@ -34,21 +34,21 @@
 
     
  }
- .img{
+ .img_1{
     grid-area: pic_1;
  }
- .img{
+ .img_2{
     grid-area: pic_2;
- }.img{
+ }.img_3{
     grid-area: pic_3;
- }.img{
+ }.img_4{
     grid-area: pic_4;
- }.img{
+ }.img_5{
     grid-area: pic_5;
- }.img{
+ }.img_6{
     grid-area: pic_6;
- }.img{
+ }.img_7{
     grid-area: pic_7;
- }.img{
+ }.img_8{
     grid-area: pic_8;
  }
