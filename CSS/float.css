@@ -1,0 +1,6 @@
+.float_prop{
+    border: 1px solid red ;
+    float: left;
+    width: 50%;
+    margin: auto;
+}

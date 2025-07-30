@@ -32,12 +32,13 @@ body{
     background-color: purple;
 }.child_3{
     background-color: greenyellow;
-}.child_4{
+}
+.child_4{
     background-color: aquamarine;
 }
 .child_1, .child_3{
-    flex-grow: 5;
+    /* flex-grow: 1; */
 }
 .child_2, .child_4{
-    flex-shrink: 0.5;
+    flex-shrink: 1.5;
 }

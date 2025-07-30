@@ -3,13 +3,13 @@
 }
 .child{
     position: sticky;
-    top: 20px;
+    top: 100px;
     background-color: yellow;
     color: black;
     
 }
  .child > img{
-    border: 2px solid red ;
+    border: 2px solid black ;
     width: 200px;
     height: 200px;
     background-size: cover;

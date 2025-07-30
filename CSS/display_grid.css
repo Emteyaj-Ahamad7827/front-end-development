@@ -19,9 +19,9 @@
     grid-template-columns: repeat(3,1fr);
 
      grid-template-areas:
-    'pic_1 pic_5 pic_3'
+    'pic_8 pic_5 pic_3'
     'pic_4 pic_2 pic_6'
-    'pic_7 pic_8 .'; 
+    'pic_7 pic_1 .'; 
 
     
  }
