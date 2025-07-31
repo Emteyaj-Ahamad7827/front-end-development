@@ -104,26 +104,7 @@ img{
     width: 50px;
     height: 50px;
 }
-/* .input_3 > img{
-    height: 50px;
-    width: 50px;
-    
-    
-}
-.input_4 > img{
-    height: 50px;
-    width: 35px;
-    
-}
-.input_5 > img{
-    height: 50px;
-    width: 35px;
-}
-.input_6 > img{
-    height: 50px;
-    width: 35px;
-    
-} */
+
 .select-tag{
     border-radius: 20px;
     border: 1px solid black;
@@ -132,4 +113,5 @@ img{
     border: 1px solid red;
     color: blue;
     block-size: none;
+    background-color: aqua;
 }
