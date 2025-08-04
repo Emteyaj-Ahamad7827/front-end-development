@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+body{
+            counter-reset: value;
+        }
+.text:hover{
+            font-size: 4rem ;
+        }
+h2::before {
+            counter-increment: value;
+            content: "data" counter(value) "-->";
+        }
