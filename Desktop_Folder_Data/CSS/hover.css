@@ -1,0 +1,17 @@
+button{
+    width: 100px;
+    height: 50px;
+    
+    background-color: yellow;
+    color: red;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+
+}
+button:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    scale: 1.5;
+}

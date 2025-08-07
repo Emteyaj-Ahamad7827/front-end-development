@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: aquamarine;
+}
+.child_1:hover{
+    transform: rotate(180deg);
+}

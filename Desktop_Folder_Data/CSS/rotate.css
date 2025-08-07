@@ -1,0 +1,35 @@
+.container{
+    border: 1px solid red;
+    height: 97vh;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+/* .body{
+    width: 150px;
+    height: 150px;
+    background: green;
+    color: white;
+} */
+.box{
+    width: 150px;
+    height: 150px;
+    background: green;
+    color: white;
+    text-align: center;
+}
+.child_2{
+    transform: rotate(60deg);
+}
+.child_3{
+    transform: rotate(90deg);
+}
+.child_3:hover{
+    background-color: red;
+    color: black;
+    cursor: pointer;
+}
+.child_4{
+    transform: rotate3d(180deg);
+}

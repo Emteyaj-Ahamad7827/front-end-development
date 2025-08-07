@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    border: 2px solid black;
+    margin-top: 150px;
+    background:linear-gradient(to right, blue, green, yellow)
+}
+h1{
+    border: 2px solid yellowgreen;
+    text-transform: capitalize;
+    font-size: 70px;
+    font-family: sans-serif;
+    font-weight: 700px;
+    text-align: center;
+    background-color: linear(to left, blue, red);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.radial{
+    
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, red,pink, blue);
+    /* background: repeating-linear-gradient(red,yellow,pink); */
+    /* background: repeating-radial-gradient(red, rgb(205, 205, 150),pink) */
+}   
+.conic{
+    margin-top: 150px;
+    width: 200px;
+    height: 200px;
+    
+}
