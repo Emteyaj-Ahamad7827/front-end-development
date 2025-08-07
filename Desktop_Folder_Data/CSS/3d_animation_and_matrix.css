@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    margin-left: 300px;
+    width: 300px;
+    height: 200px;
+    background-color: yellowgreen;
+    border: 1px solid black;
+}
+#div-1{
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(rgb(240, 6, 174), blue,aqua);
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    border-radius: 75px;
+    animation: rotatematrix 5s linear alternate-reverse;
+}
+@keyframes rotatematrix{
+    from{
+        transform:matrix(1,0.1,0.2,0,0)
+    }
+        
+    to{
+        transform: matrix(0.6,0.5,0.5,2,200,200);
+    }
+}
+#div-2{
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(rgb(9, 165, 232), rgb(216, 7, 42),rgb(7, 233, 108));
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    border-radius: 75px;
+    animation: mymove 5s linear alternate-reverse;
+}
+/* @keyframes mymove{
+    0%{transform: matrix3d(0deg);}
+    50%{
+        transform: matrix3d(360deg);
+    }
+} */
+ /* #div-2{
+    transform: rotate3d(360deg);
+ } */
+  #div-3{
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(rgb(9, 165, 232), rgb(216, 7, 42),rgb(7, 233, 108));
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    border-radius: 75px;
+    animation: mymove 5s linear alternate-reverse;
+}
+#div-3:hover{
+    scale: 1.5;
+    cursor: pointer;
+    background-color: aqua;
+}
+#div-2:hover{
+    opacity: 0.5;
+}

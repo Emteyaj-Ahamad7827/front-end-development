@@ -1,0 +1,16 @@
+:root{
+    --width: 100px;
+    --width-1: 200px;
+    --height: 100px;
+    --height-1: 200px;
+}
+.container{
+    border: 1px solid red;
+    width: 100px;
+    height: 150px;
+}
+.container_1{
+    border: 1px solid blue;
+    width: calc(var(--width) + var(--width-1));
+    height: calc(var(--height) + var(--height-1));
+}

@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /* .container{
+    border: 1px solid red;
+    height: 90vh;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}  */
+.container > div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue;
+
+}
+.child > img{
+    height: 200px;
+    width: 200px;
+    
+}
+/* grid properties */
+body{
+    height: 90vh;
+    border: 1px solid black;
+}
+.container{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* note-for grid */
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid black;
+       
+}
+.child_1{
+    background-color: aquamarine;
+}.child_2{
+    background-color: greenyellow;
+}.child_3{
+    background-color: gray;
+}.child_4{
+    background-color: aqua;
+    
+}

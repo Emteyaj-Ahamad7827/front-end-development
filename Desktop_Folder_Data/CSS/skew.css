@@ -1,0 +1,29 @@
+.container{
+    border: 1px solid red;
+    height: 97vh;
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background: green;
+    color: white;
+    text-align: center;
+}
+
+.child_1{
+transform: skewX(20deg);
+}
+.child_2{
+    transform: skewy(20deg);
+}
+.child_3{
+    transform: skew(20deg,30deg);
+}
+.child_4{
+    transform: skewz(20deg);
+}

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.hello{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: 700px;
+    font-size: 85px;
+    text-align: center;
+}
+.something{
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: 700px;
+    font-size: 85px;
+    text-align: center;
+}
+
+.hello:hover{
+    transition: ease-out;
+    transition-duration: 0.5s;
+    transition-delay: 0.7s;
+    transform: scale(1.5s);
+    border: 1px solid red;   
+}
+.animation_1{
+    animation-name: class;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    text-align: center;
+    font-size: 85px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    background-color: tomato;
+}
+@keyframes class{
+    from{
+        translate: 200vw 0;
+        scale: 200% 1;
+    }
+    to{
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+.animation_2{
+    animation-name: class_1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    text-align: center;
+    font-size: 85px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    background-color: rgb(232, 160, 5);
+}
+@keyframes class_1{
+    from{
+        translate: -200vw 0;
+        scale: 200% 1;
+    }
+    to{
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+
