@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <link rel="stylesheet" href="../selector.css">
+</head>
+<body>
+    <!-- combinator selector -->
+     <!-- start child combinator -->
+      <div class="combinator">
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+      </div>
+      <!-- and child combinator -->
+       <!-- start descedant combinator -->
+
+       <ul>
+        <li>
+            <div>Item 1</div>
+            <ul>
+                <li>subitem A</li>
+                <li>subitem B</li>
+            </ul>
+        </li>
+        <li>
+            <div>Item 2</div>
+            <ul>
+                <li>subitem A</li>
+                <li>subitem B</li>
+            </ul>
+        </li>
+       </ul>
+       <!-- end descendent combinator -->
+
+       <!-- subsequent sibling start -->
+        <article>
+            <p>hello</p>
+            <span>this is not red because it appears before a </span>
+            <p>here is a paragraph.</p>
+            <code>here is some code.</code>
+            <span>
+                this span is red because it appears after the are other nodes in between
+            </span>
+            <p>whatever it may be, keep smiling.</p>
+            <h1>dream big</h1>
+            <span>
+                doesn't matter how many or what kind of nodes the same parent after a paragraph are red.
+            </span>
+        </article>
+        <span>
+            this span is not red because it doesn't share a p
+        </span>
+        <!-- subsquent sibling end -->
+
+        <!-- next sibling start -->
+         <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+         </ul>
+         <p>
+            <b>hello</b>
+            <i>hello</i>
+         </p>
+         <!-- next sibling end -->
+
+        <!-- name space start -->
+         <p>this paragraph <a href="#">has a link</a></p>
+
+         <svg width="400" viewbox="0 0 400 20">
+            <a href="#">
+                <text x="0" y="15"> link created in svg</text>
+            </a>
+         </svg>
+         <!-- name space end -->
+
+
+         <!-- & nesting selector start -->
+          <p class="examle">
+            this paragraph <a href="#">contains a link</a>, t
+          </p>
+          <!-- nesting selectors end -->
+</body>
+</html>

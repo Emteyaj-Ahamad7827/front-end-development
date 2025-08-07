@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* combinator selector */
+
+/*
+! child combinator: the child combinator (>) us placed between tow css selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first. 
+ */
+
+ .combinator > h1{
+    color: red;
+ }
+
+ /* 
+ # descedent combinator: typically represented by a single space (" ") charactor - combains two selectors such that elements matched by the second selectors are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. selectors that utilize a descendant combinator are called descendant selectors.
+  */
+
+  li{
+    list-style: disc;
+  }
+  li li {
+    list-style: circle;
+  }
+
+  /* 
+  & the subsequent sibling combinator (~, a tilde) 
+  separates two selectors and matches allo instance of the second element that follow the first element (not necessarily immediately ) and share the same parent element.
+   */
+   
+
+   /* span{
+    border: 2px solid red;
+   }
+   div{
+    border: 2px solid red;
+
+   } */
+
+   /* span,
+   div{
+    border: 2px solid red;
+
+   } */
+
+   /* :is(span, div){
+    border: 2px solid red;
+
+   } */
+
+   p ~ span{
+    color: blue;
+   }
+
+li:first-of-type + li{
+    color: purple;
+    font-weight: bold;
+}
+p > b + i {
+    color: gold;
+    background: #000;
+}
+
+a {
+    font-size: 20px;
+}
+/* no namespace */
+|a{
+    text-decoration: wavy overline lime;
+    font-weight: bold;
+}
+
+/* all namespaces (including no namespaces)  */
+*|a {
+    color: red;
+    fill: red;
+    font-style: italic;
+}
+/* only the svgNameSpace namespace, while is the HTML document */
+
+htmlNameSpace|a {
+    text-decoration-line: line-through;
+}
+
+.example{
+    font-family: system-ui;
+    font-size: 1.2rem;
+    & > a {
+        color: tomato;
+        &:hover,
+        &focous{
+            color: white;
+            background-color: tomato;
+        }
+    }
+}

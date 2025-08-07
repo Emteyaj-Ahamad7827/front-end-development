@@ -13,11 +13,25 @@ html{
 body{
     display: flex;
     align-items: center;
+    justify-content: center;
 
 }
 .container{
     height: 40vh;
     width: inherit;
     background-color: white;
-    
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    gap: 50px;
+}
+.numbers{
+    align-items: center;
+    display: flex;
+    gap: 50px;
+}
+p1, p2{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 15px;
 }
