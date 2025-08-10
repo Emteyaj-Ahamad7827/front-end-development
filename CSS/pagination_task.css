@@ -29,9 +29,19 @@ body{
     align-items: center;
     display: flex;
     gap: 50px;
+    font-weight: 800px;
+    font-size: xx-large;
 }
-p1, p2{
+p1{
     position: absolute;
     margin-top: 7px;
-    margin-left: 15px;
+    /* margin-right: 20px; */
 }
+p2{
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 25px;
+}
+/* .first, p, .last{
+    background-color: red;
+} */

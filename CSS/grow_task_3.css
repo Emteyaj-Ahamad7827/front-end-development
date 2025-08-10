@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    height: 250px;
+    background: none;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.box{
+    width: 100%;
+    height: 73px;
+    margin: 5px;
+    background-color: navy;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first_row, .second_row, .third_row{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(9, 70, 238);
+
+}
