@@ -81,13 +81,14 @@ section > img{
     margin: 20px;
 
 }
-.footer{
+.imgicon{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
+    
 
 }
-.footer > img{
+.imgicon > img{
     height: 50px;
 }
