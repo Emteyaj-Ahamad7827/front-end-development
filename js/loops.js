@@ -25,6 +25,6 @@ console.log(~ sum:)
 let number = 6;
 
 do {
-    console.log(number); 6, 7, 8, 9
+    console.log(number); //6, 7, 8, 9//
     number++;
 } while (numbers < 10);
