@@ -1,0 +1,22 @@
+body{
+    background-color: blue;
+    color: white;
+    display: flex;
+
+    justify-content: center;
+    align-items: center
+}
+#todo_list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+}
+input{
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    background-color: red;
+}
