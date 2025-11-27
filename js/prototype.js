@@ -4,28 +4,28 @@
 // unshift
 // splice
 // slice
-let arr = [1 , 2, 3, 4, 5];
+// let arr = [1 , 2, 3, 4, 5];
 
-arr.push(6,7,8);
-arr 
-Array.prototype.pushpa=function(...value){
-    let index=this.length;
-    index 
-    this[index]=value;
-}
-arr.pushpa(9,10,11);
-arr
-let arr = [1 , 2, 3, 4, 5];
+// arr.push(6,7,8);
+// arr 
+// Array.prototype.pushpa=function(...value){
+//     let index=this.length;
+//     index 
+//     this[index]=value;
+// }
+// arr.pushpa(9,10,11);
+// arr
+// let arr = [1 , 2, 3, 4, 5];
 
-arr.push(6,7,8);
-arr 
-Array.prototype.pushpa=function(...value){
-    let index=this.length;
-    index 
-    this[index]=value;
-}
-arr.pushpa(9,10,11);
-arr
+// arr.push(6,7,8);
+// arr 
+// Array.prototype.pushpa=function(...value){
+//     let index=this.length;
+//     index 
+//     this[index]=value;
+// }
+// arr.pushpa(9,10,11);
+// arr
 
 
 
