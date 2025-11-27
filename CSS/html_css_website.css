@@ -3,8 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    /* width: 80%; */
+    justify-content: center;
+    align-items: center;
+}
+.main_part{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .main{
-    height: 97vh;
+    height: 75vh;
+    background-color: lightgray;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
     
 }
 .nav{
@@ -50,12 +65,12 @@ section{
     position: absolute;
     background-color: white;
     border: 1px solid black;
-    top: 90px;
-    left: 700px;
+    top: 110px;
+    left: 705px;
     width: 120px ;
     border-radius: 20px;
     text-align: center;
-    transform: skew(20deg, -20deg);
+    transform: skew(5deg, -10deg);
     
 }
 h1{
@@ -64,10 +79,28 @@ h1{
     text-align: center;
     line-height: 1.3;
 }
+.detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+.btn-2{
+    /* position: absolute; */
+    margin-top: 50px;
+    width: 110px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    /* opacity: 0.5; */
+}
 .imgicon{
     display: flex;
     justify-content: space-between;
-    margin: 0 100px ;
+    align-items: center;
+    margin: 70px 100px ;
 
     
 }
@@ -75,7 +108,39 @@ img{
     width: 100px;
     height: 100px;
 }
-.not{
+.info{
+    /* margin-top: 200px; */
+    background-color: lightgray;
+
+    /* display: flex; */
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+}
+.info hr {
+    margin: 100px;
+}
+.btn-3{
+    /* margin-top: 20px; */
+    border: none;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    transform: skew(20deg, -20deg);
+
+}
+
+.bottom{
+    background-color: lightgray;
+
+    /* margin-top: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-width: 4;
+}
+.footer > img{
     width: 40px;
-    height: 30px;
+    height: 40px;
+    background-color: transparent;
 }

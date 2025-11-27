@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: xx-large;
 }
 body,
 html{
@@ -32,16 +33,40 @@ body{
     font-weight: 800px;
     font-size: xx-large;
 }
-p1{
+/* p1, p2{
     position: absolute;
-    margin-top: 7px;
-    /* margin-right: 20px; */
-}
-p2{
+    margin-left: 200px;
+    font-size: xx-large;
+    margin: 200px;
+} */
+/* p2{
     position: absolute;
-    margin-top: 7px;
-    margin-left: 25px;
-}
+    margin-top: 7px;    
+} */
 /* .first, p, .last{
     background-color: red;
 } */
+.first, .last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    /* background-color: gray; */
+
+}
+img{
+    width: 50px;
+    gap: 100px;
+    
+}
+.last > img{
+    height: 36px;
+}
+.second{
+    /* background-color: red; */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 20px; */
+}

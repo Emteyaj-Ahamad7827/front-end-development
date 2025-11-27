@@ -12,11 +12,11 @@ let num1 = 3;
 console.log(' ~ num1:', typeof num1);
 let name = "3";
 console.log(' ~ num2:', typeof num2);
-console.log(' checking value:', num1 !==)
+console.log(' checking value:', num1 !==);
 
 // logical operator//
 
-let num1 = 3;
+let num6 = 3;
 let num2 = 3;
 let num4 = 3;
 let num5 = 3;
@@ -33,7 +33,7 @@ console.log(' flags:', !flags);
 // conversion into number to binary and binary to number...
 
 let number = 50; // decimal number
- let binaryConv = number,toString(2);
+ let binaryConv = number.toString(2);
  
  //conole.log(' binaryconv:', binaryconv);
  
@@ -43,9 +43,9 @@ let number = 50; // decimal number
 
 // dealing with binary system/number-system
 
-& -- and 
-| -- or
-~ -- not
+&& -- and 
+|| -- or
+!  -- not
 
 // # spread and rest operators
 
