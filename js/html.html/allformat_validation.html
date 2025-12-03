@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Validation</title>
 </head>
 <body>
     <form action="#" onsubmit="myform(event)">
         <div class="user_div">
+            <label>user</label>
+            <input autocomplete="off" id="user" name="user" type="text">
+            <span id="username_msg"></span>
 
         </div>
         <div class="pass_div">
             <label > password</label>
-            <input outcomplete="off" id="pass" name="pass" type="text">
+            <input autocomplete="off" id="pass" name="pass" type="text">
             <span id="pass_msg"></span>
         </div>
-        <div class="confass_div">
+        <div class="confpass_div">
             <label>confirm password</label>
-            <input autocomplete="off" id="confass" name="confass" type="text">
-            <span id="confass_msg"></span>
+            <input autocomplete="off" id="confpass" name="confpass" type="text">
+            <span id="confpass_msg"></span>
         </div>
         <div class="mobile">
             <label>mobile number</label>

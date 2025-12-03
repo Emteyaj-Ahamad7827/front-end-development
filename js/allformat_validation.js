@@ -1,4 +1,5 @@
 function myform(e) {
+    let userName = document.getElementById("user").value;
     let password = document.getElementById("pass").value;
     let consfirmPassword = document.getElementById("confpass").value;
     let mobile = document.getElementById("mobile_number").value;
@@ -7,7 +8,7 @@ function myform(e) {
     // user validation
     if (userName == "") {
         document.getElementById("username_msg").innerHTML =
-        " ** please fir the userName field";
+        " ** please fill the userName field";
         document.getElementById("username_msg").style.color = "red";
         return false;
     } else if (userName.length <= 2 || userName.length > 20) {
@@ -39,9 +40,9 @@ function myform(e) {
         document.getElementById("pass_msg").style.color = "red";
         return false;
 
-    } else if (password !== consfirmPassword) {
+    } else if (password !== confirmPassword) {
         document.getElementById("confpass_msg").innerHTML = 
-        " ** Passwor not matched";
+        " ** Password not matched";
         document.getElementById("confpass_msg").style.color = "red";
         return false;
     }
@@ -51,7 +52,7 @@ function myform(e) {
 
     // confirmPass validation
 
-    if (consfirmPassword == "") {
+    if (confirmPassword == "") {
         document.getElementById("confpass_msg").innerHTML = 
         "** please fill the confirmPassword field";
         document.getElementById("confpass_msg").style.color = "red";
@@ -69,13 +70,47 @@ function myform(e) {
         "** please fill the mobile fieldd";
         document.getElementById("mobile_msg").style.color = "red";
         return false
-    } else if (NaN(mobile)) {
+    } else if (isNaN(mobile)) {
         document.getElementById("mobile_msg").innerHTML =
         " ** please enter a digit not a characters.";
         document.getElementById("mobile_msg").style.color = "red";
         return false;
 
+    } else if(mobile.length !== 10) {
+        document.getElementById("mobile_msg").innerHTML =
+        " ** Mobiel number must be a 10 digit.";
+        document.getElementById("mobile_msg").style.color = "red";
+        return false;
     }
+    else {
+        document.getElementById("mobile_msg").innerHTML = ''
+    }
+
+    // email validation
+
+    if (email == "") {
+        document.getElementById("email_msg").innerHTML =
+        "** Please fill the email field";
+        document.getElementById("email_msg").style.color = "red";
+        return false;
+    } else if (email.indexof("@") <= 0) {
+        document.getElementById("email_msg").innerHTML = " ** @ invalid position.";
+        document.getElementById("email_msg").style.color = "red";
+        return false;
+    }
+    // emteyajahmad10@gmail.com // length 20
+    else if(
+        email.charAt(email.length - 4) !== "." &&
+        email.charAt(email.length - 3) !== "."
+    ) {
+        document.getElementById("emal_msg").innerHTML = " ** invalid position.";
+        document.getElementById("email_msg").style.color = "red";
+        return false;
+    }
+    else{
+        document.getElementById("email_msg").innerHTML = ''
+    }
+    
 
 
 }
