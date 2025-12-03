@@ -1,0 +1,24 @@
+{
+    "user": [
+        { 
+            "id": 1,
+            "name": "emteyaj",
+            "age": 27,
+            "pass": "emte7827"
+        }
+    ],
+        "todos": [
+        { 
+            "id": 1,
+            "text": "learn json",
+            "isEdit": false,
+            "isComplete": false
+        },
+            { 
+            "id": 2,
+            "text": "learn react",
+            "isEdit": false,
+            "isComplete": false
+        }
+    ]
+}
