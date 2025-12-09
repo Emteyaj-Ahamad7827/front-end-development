@@ -1,6 +1,6 @@
 let data;
 
-const API = ;
+const API = 'https://jsonplaceholder.typicode.com/todos';
 
 function myTodosAdd(){
     const todoText = document.querySelector('#todos').value;
