@@ -1,7 +1,7 @@
 function myform(e) {
     let userName = document.getElementById("user").value;
     let password = document.getElementById("pass").value;
-    let consfirmPassword = document.getElementById("confpass").value;
+    let confirmPassword = document.getElementById("confpass").value;
     let mobile = document.getElementById("mobile_number").value;
     let email = document.getElementById("email").value;
 
