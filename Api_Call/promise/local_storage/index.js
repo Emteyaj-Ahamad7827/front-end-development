@@ -26,7 +26,7 @@ function dataAppend(value) {
         const price = document.getElement('h3')
         const category = document.getElement('h3')
 
-        id.inn
+        id.innerText = el.id;
     });
     
 }
