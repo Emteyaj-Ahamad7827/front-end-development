@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Home.css">
+</head>
+
+<body onload="UI_Cart()">
+    <div id="cartData"></div>
+</body>
+
+<script>
+    const getCart = JSON.parse(localStorage.getItem("cartData"));
+
+    function UI_Cart() {
+        const mainDiv = document.querySelector('#cartData');
+
+        getCart?.forEach((el) => {
+            const childDiv = document.createElement('div');
+            const id = document.createElement('h3');
+            const img = document.createElement('img');
+            const title = document.createElement('h3');
+            const description = document.createElement('h3');
+            const price = document.createElement('h3');
+            const category = document.createElement('h3');
+            const checkoutBtn = document.createElement('button');
+
+            id.innerText = el.id;
+
+            img.src = el.image;
+
+            title.innerText = el.title;
+
+            description.innerText = el.description;
+
+            price.innerText = el.price;
+
+            category.innerText = el.category;
+
+            checkoutBtn.innerText = 'checkout';
+
+            // checkoutBtn.onclick = function () {
+            //     alert(`the element click and the is was ${el.id}`)
+            // }
+
+            // checkoutBtn.addEventListener('click', () => {
+            //     console.log(el);
+
+            //     cartData.push(el);
+
+            //     localStorage.setItem('cartData', JSON.stringify(cartData));
+            // });
+
+            childDiv.append(id, img, title, description, price, category, checkoutBtn);
+            mainDiv.append(childDiv);
+        })
+
+    }
+
+
+</script>
+
+</html>
