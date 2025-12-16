@@ -7,7 +7,7 @@
 
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="logo">
             <img src="" alt="">
 
@@ -25,4 +25,12 @@
     <div id="mainData"></div>
 </body>
 <script src="./index.js"></script>
+<script type="module">
+    import {navbar} from '../components/navbar.js'
+    console.log('navbar', navbar);
+
+    document.querySelector(#navbar).innerHtml = navbar();
+    
+</script>
+
 </html>
