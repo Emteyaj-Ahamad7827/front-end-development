@@ -5,6 +5,7 @@ async function ApiCall() {
     try {
         const res = await fetch(API);
         const data = await res.json();
+        dataAppend(data);
     } catch (error) {
         console.log('error', error);
         
@@ -27,7 +28,7 @@ function dataAppend(value) {
         const category = document.getElement('h3')
 
         id.innerText = el.id;
-        img.src = el.img;
+        img.src = el.image;
         title.innerText = el.title;
         description.innerText = el.description;
         price.innerText = el.price;

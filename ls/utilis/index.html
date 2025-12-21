@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>local storage</title>
-
+    <link rel="stylesheet" href="../cs/home.css">
 </head>
 <body>
-    <nav id="navbar">
-        <div class="logo">
-            <img src="" alt="">
+    <nav>
+    <!-- <div class="logo">
+        <img src="" alt="">
 
-        </div>
-        <ul>
-            <li>home</li>
-            <li>product</li>
-            <li>contact</li>
-        </ul>
-        <ul>
-            <li onclick="window.location='ls/pages/Login.html'">Login</li>
-            <li onclick="window.location='ls/pages/Signup.html'">Signup</li>
-        </ul>
-    </nav>
-    <div id="mainData"></div>
+    </div> -->
+    <ul>
+        <li>Home</li>
+        <li>Product</li>
+        <li>Contact</li>
+    </ul>
+    <ul>
+        <li onclick="window.location='/ls/pages/Login.html'">Login</li>
+        <li onclick="window.location='/ls/pages/Signup.html'">Signup</li>
+    </ul>
+</nav>
+<h1>Product List</h1>
+<div id="mainData"></div>
+<footer>
+    Rishabh | Hey..
+</footer>
+
+
+
 </body>
-<script src="./index.js"></script>
-<script type="module">
+<script src="../js/index.js"></script>
+
+<!-- <script type="module">
     import {navbar} from '../components/navbar.js'
     console.log('navbar', navbar);
 
     document.querySelector(#navbar).innerHtml = navbar();
     
-</script>
+</script> -->
 
 </html>
