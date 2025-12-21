@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
 </head>
 <body>
     <button onclick="window.location='/ls/index.html'">back</button>
+    <button onclick="signUp()"></button>
     <div class="mainContainer">
         <div class="signupPagge">
             <h1>Signup</h1>
@@ -25,4 +26,72 @@
     
 </body>
 <script src="../js.js/sign_up.js"></script>
+</html> -->
+
+
+
+ <!-- new code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <!-- Correct CSS path (update if needed) -->
+    <!-- <link rel="stylesheet" href="../css/login.css"> -->
+</head>
+<body>
+
+    <!-- Back button -->
+    <button type="button" onclick="window.location.href='../index.html'">
+        Back
+    </button>
+
+    <div class="mainContainer">
+        <div class="signupPage">
+            <h1>Signup</h1>
+
+            <label for="signUsername">Username</label>
+            <input
+                type="text"
+                id="signUsername"
+                placeholder="Enter your name..."
+                autocomplete="off"
+            >
+
+            <label for="SignAge">Age</label>
+            <input
+                type="number"
+                id="SignAge"
+                placeholder="Enter your age..."
+                autocomplete="off"
+            >
+
+            <label for="signPassword">Password</label>
+            <input
+                type="password"
+                id="signPassword"
+                placeholder="Enter your password..."
+                autocomplete="off"
+            >
+
+            <button
+                class="button"
+                type="button"
+                onclick="signUp()"
+            >
+                Submit
+            </button>
+
+            <p id="signupError" style="color:red;"></p>
+            <p id="signupSuccess" style="color:green;"></p>
+        </div>
+    </div>
+
+    <!-- JS file MUST be inside body and after HTML -->
+</body>
+    <script src="../js.js/sign_up.js"></script>
+
 </html>
