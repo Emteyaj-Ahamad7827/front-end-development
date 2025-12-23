@@ -1,10 +1,10 @@
-#mainData{
+ #mainData{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    
 
-
-}
+} 
 
 #mainData> div {
     height: 100%;
@@ -54,13 +54,13 @@ h1{
 #mainData {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 20px;
     padding: 20px;
 }
 
 #mainData > div{
     background: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     border: 1px solid #dce1e6;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -81,4 +81,10 @@ footer{
     color: white;
     margin-top: 40px;
     font-size: 18px;
+}
+
+.cartimg{
+    /* position: relative; */
+    width: 25px;
+    height: 25px;
 }

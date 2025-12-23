@@ -19,13 +19,14 @@ function dataAppend(value) {
     const mainDiv = document.querySelector('#mainData');
 
     value?.forEach(el => {
-        const childDiv = document.getElement('div')
-        const id = document.getElement('h3')
-        const img = document.getElement('img')
-        const title = document.getElement('h3')
-        const description = document.getElement('h3')
-        const price = document.getElement('h3')
-        const category = document.getElement('h3')
+        const childDiv = document.createElement('div')
+        const id = document.createElement('h3')
+        const img = document.createElement('img')
+        const title = document.createElement('h3')
+        const description = document.createElement('h3')
+        const price = document.createElement('h3')
+        const category = document.createElement('h3')
+        const addBtn = document.createElement('button')
 
         id.innerText = el.id;
         img.src = el.image;
@@ -33,8 +34,9 @@ function dataAppend(value) {
         description.innerText = el.description;
         price.innerText = el.price;
         category.innerText = el.category;
+        addBtn.innerText = 'addBtn';
 
-        childDiv.append(id,img, title, description, price, category);
+        childDiv.append(id,img, title, description, price, category, addBtn);
         mainDiv.append(childDiv);
     });
     
