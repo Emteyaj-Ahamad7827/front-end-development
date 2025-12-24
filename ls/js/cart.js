@@ -3,6 +3,12 @@ let cart = JSON.parse(localStorage.getItem("cartData")) || [];
 const cartDiv = document.getElementById("cartData");
 const totalPriceEl = document.getElementById("totalPrice");
 
+cart.push({
+  title: "Product Name",
+  price: 999,
+  image: "image-url"
+});
+
 function displayCart() {
     cartDiv.innerHTML = "";
     let total = 0;
