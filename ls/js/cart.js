@@ -55,6 +55,8 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartData = document.getElementById("cartData");
 const totalDiv = document.getElementById("total");
+const cartPage = document.getElementById("cartPage");
+
 
 function displayCart() {
     cartData.innerHTML = "";
