@@ -23,18 +23,18 @@ const renderOnUI = (data = store) => {
         const checkBox = document.createElement('input');
         const text = document.createElement('h3');
 
-        const childDiv = document = document.createElement('div');
+        const childDiv = document.createElement('div');
 
-        const btn_edit = document = document.createElement('button');
-        const btn_delete = document = document.createElement('button');
-        const btn_filter = document = document.createElement('filter');
+        const btn_edit = document.createElement('button');
+        const btn_delete = document.createElement('button');
+        const btn_filter = document.createElement('filter');
 
         btn_edit.innerText = 'edit';
         btn_delete.innerText = 'delete';
         btn_filter.innerText = 'filter';
 
         checkBox.type = 'checkbox';
-        childDiv.className = 'div-${i + 1}';
+        childDiv.className = `div-${i + 1}`;
 
         text.innerText = el.textTodo;
 
