@@ -64,6 +64,7 @@ function dataAppend(value) {
     const filterBy = document.createElement('select');
     const categoryBy = document.createElement('div');
     
+    
     const optionSort1 = document.createElement('option');
     const optionSort2 = document.createElement('option');
     const mainDiv = document.querySelector('#mainData');

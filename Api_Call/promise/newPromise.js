@@ -149,6 +149,7 @@ handleAsync();
 // <body>
 //     <h1>Promise</h1>
 // </body>
+
 // <script src="./newPromise2.js"></script>
 
 // </html>
