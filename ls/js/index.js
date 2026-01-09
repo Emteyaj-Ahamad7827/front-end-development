@@ -1,142 +1,98 @@
-// const API = 'https://fakestoreapi.com/products';
+const API = "https://fakestoreapi.com/products";
 
-// async function ApiCall() {
-
-//     try {
-//         const res = await fetch(API);
-//         const data = await res.json();
-//         dataAppend(data);
-//     } catch (error) {
-//         console.log('error', error);
-        
-//     }
-// }
-
-// ApiCall();
-
-// function dataAppend(value) {
-//     console.log('value', value);
-//     const mainDiv = document.querySelector('#mainData');
-
-//     value?.forEach(el => {
-//         const childDiv = document.createElement('div')
-//         const id = document.createElement('h3')
-//         const img = document.createElement('img')
-//         const title = document.createElement('h3')
-//         const description = document.createElement('h3')
-//         const price = document.createElement('h3')
-//         const category = document.createElement('h3')
-//         const addBtn = document.createElement('button')
-
-//         id.innerText = el.id;
-//         img.src = el.image;
-//         title.innerText = el.title;
-//         description.innerText = el.description;
-//         price.innerText = el.price;
-//         category.innerText = el.category;
-//         addBtn.innerText = 'addBtn';
-
-//         childDiv.append(id,img, title, description, price, category, addBtn);
-//         mainDiv.append(childDiv);
-//     });
-    
-// }
-
-// new code
-
-const API = 'https://fakestoreapi.com/products';
+let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 
 async function ApiCall() {
-    try {
-        const res = await fetch(API);
-        const data = await res.json();
-        dataAppend(data);
-    } catch (error) {
-        console.log('error', error);
-    }
+  try {
+    const res = await fetch(API);
+    const data = await res.json();
+    dataAppend(data);
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-ApiCall();
+window.onload = function () {
+  ApiCall();
+  updateCartCount();
+};
 
 function dataAppend(value) {
-    mainDiv.innerHTML = "";
-    const sortBy = document.createElement('select');
-    const filterBy = document.createElement('select');
-    const categoryBy = document.createElement('div');
-    
-    
-    const optionSort1 = document.createElement('option');
-    const optionSort2 = document.createElement('option');
-    const mainDiv = document.querySelector('#mainData');
+  // this is sort & filter code
 
-    optionSort1.value = 'high to low';
-    optionSort1.innerText = 'high to low';
+  let filterData = [];
+  const mainDiv = document.querySelector("#mainData");
 
-    optionSort2.value = 'low to high';
-    optionSort2.innerText = 'low to high';
+  mainDiv.innerHTML = "";
 
-    sortBy.name = 'select_sorting';
+  value?.forEach((el) => {
+    const childDiv = document.createElement("div");
 
-    categoryBy.className = 'category';
+    const id = document.createElement("h3");
+    const img = document.createElement("img");
+    const title = document.createElement("h3");
+    const description = document.createElement("h3");
+    const price = document.createElement("h3");
+    const category = document.createElement("h3");
 
-    sortBy.append(optionSort1, optionSort2);
+    const addBtn = document.createElement("button");
+    const plusBtn = document.createElement("button");
+    const minusBtn = document.createElement("button");
+    const qty = document.createElement("span");
 
-    categoryBy.append(sortBy, filterBy);
-    
-    document.body.insertBefore(categoryBy, mainDiv);
+    plusBtn.style = "display:none";
+    minusBtn.style = "display:none";
+    qty.style = "display:none";
 
-    value.forEach(el => {
-        const childDiv = document.createElement('div');
+    plusBtn.innerText = "+";
+    minusBtn.innerText = "-";
+    qty.innerText = "1";
 
-        const id = document.createElement('h3');
-        const img = document.createElement('img');
-        const title = document.createElement('h3');
-        const description = document.createElement('p');
-        const price = document.createElement('h3');
-        const category = document.createElement('h3');
-        const addBtn = document.createElement('button');
+    id.innerText = el.id;
+    img.src = el.image;
+    title.innerText = el.title;
+    description.innerText = el.description;
+    price.innerText = ₹ ${el.price};
+    category.innerText = el.category;
+    addBtn.innerText = "Add";
 
-        id.innerText = `ID: ${el.id}`;
-        img.src = el.image;
-        img.style.width = "150px";
+    // here we are adding the data in the arr which we have to use in tags
+    filterData.push(el.category);
+    const existingProduct = cartData.find((item) => item.id === el.id);
+    if (existingProduct) {
+        addBtn.style.display = 'none';
+        plusBtn.style.display = 'inline-block';
+        minusBtn.style.display = 'inline-block';
+        qty.style.display = 'inline-block';
+        qty.innerText = existingProduct.qty;
 
-        title.innerText = el.title;
-        description.innerText = el.description;
-        price.innerText = `₹ ${el.price}`;
-        category.innerText = el.category;
-
-        addBtn.innerText = 'Add to Cart';
-
-        // 🔥 ADD TO CART CLICK EVENT
-        addBtn.addEventListener('click', () => {
-            addToCart(el);
-        });
-
-        childDiv.append(id, img, title, description, price, category, addBtn);
-        mainDiv.append(childDiv);
-    });
-}
-
-// 🛒 Add to Cart Function
-function addToCart(product) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    const exists = cart.find(item => item.id === product.id);
-
-    if (exists) {
-        exists.quantity += 1;
-    } else {
-        cart.push({
-            id: product.id,
-            title: product.title,
-            price: product.price,
-            image: product.image,
-            quantity: 1
-        });
     }
+    addBtn.addEventListener('click'), () => {
+        addBtn.style = 'display:none';
+        plusBtn.style = 'display:inline-block';
+        qty.style = 'display:inline-block';
+        minusBtn.style = 'display:inline-block';
+        cartData.push({...el, qty: 1 });
+        qty.innerText = 1;
+        localStorage.setItem('cartData', JSON.stringify(cartData));
+        updateCartCount();
 
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert("Product added to cart 🛒");
-}
+    });
 
+    plusBtn.addEventListener('click', () => 
+    const item = cartData.find((item) => item.id === el.id);
+    item.qty +=;
+qty.innerText = item.qty;
+minusBtn.disabled = false;
+localStorage.setItem('cartData', JSON.stringify(cartData));
+updateCartCount();
+});
 
+minusBtn.addEventListener('click', () => {
+    const item = cartData.find((item) => item.id === el.id);
+    item.qty -= 1;
+
+    if (!item || item.qty <= 0) {
+        
+    }
+})
