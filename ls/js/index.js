@@ -79,9 +79,9 @@ function dataAppend(value) {
 
     });
 
-    plusBtn.addEventListener('click', () => 
+    plusBtn.addEventListener('click', () => {
     const item = cartData.find((item) => item.id === el.id);
-    item.qty +=;
+    item.qty += 1;
 qty.innerText = item.qty;
 minusBtn.disabled = false;
 localStorage.setItem('cartData', JSON.stringify(cartData));
@@ -93,6 +93,79 @@ minusBtn.addEventListener('click', () => {
     item.qty -= 1;
 
     if (!item || item.qty <= 0) {
-        
+     addBtn.style.display = 'inline-block';   
+     plusBtn.style.display = 'none';   
+     minusBtn.style.display = 'none';   
+     qty.style.display = 'none';   
+    } else {
+      addBtn.style.display = 'none';
+      plusBtn.style.display = 'inline-block';
+      minusBtn.style.display = 'inline-block';
+      qty.style.display = 'inline-block';
+      qty.innerText = item.qty;
+      if (item.qty === 1) {
+        minusBtn.disabled = true;
+      } else {
+        minusBtn.disabled = false;
+      }
     }
-})
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+    updateCartCount();
+});
+
+childDiv.append(id, img, title, description, price, category, addBtn, plusBtn, qty, minusBtn);
+mainDiv.append(childDiv);
+});
+
+let singleFilterData = filterData.reduce((acc, curr) =>{
+  acc[curr] = (acc[curr] || 0) + 1;
+  return acc;
+}, {});
+
+const sortBy = document.createElement('select');
+const categoryBy = document.createElement('div');
+const filterBy = document.createElement('select');
+
+const optionSort1 = document.createElement('option');
+const optionSort2 = document.createElement('option');
+
+optionSort1.value = 'high to low';
+optionSort2.innerText = 'high to low';
+
+optionSort2.value = 'low to high';
+optionSort2.innerText = 'low to high';
+
+sortBy.name = 'select_sorting';
+
+categoryBy.className = 'category';
+
+sortBy.append(optionSort1, optionSort2);
+
+// filterBy
+
+Object.keys(singleFilterData).map((el) => {
+  const optionFilter = document.createElement('option');
+  optionFilter.innerText = el;
+  optionFilter.value = el;
+});
+
+categoryBy.append(sortBy, filterBy);
+
+document.body.insertBefore(categoryBy, mainDiv);
+console.log('filterData', filterData);
+}
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cartData')) || [];
+
+  let totalQty = 0;
+  cart.forEach((item) => {
+    totalQty += Number(item.qty) || 0;
+  });
+
+  const badge = document.getElementById('cartCount');
+  if (!badge) return;
+
+  badge.innerText = totalQty
+  badge.style.display  = totalQty > 0 ? 'inline-block'  : 'none'
+};
