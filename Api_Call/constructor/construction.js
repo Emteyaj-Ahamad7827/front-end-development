@@ -32,18 +32,54 @@
 
 // construction with class call, apply, bind
 
-let person = {
-    name: 'rahul'
-}
+// let person = {
+//     name: 'rahul'
+// }
 
-class PersonDetails {
-    constructor(age, city){
-        ((this.age = age), (this.city = city));
+// class PersonDetails {
+//     constructor(age, city){
+//         ((this.age = age), (this.city = city));
+//     }
+// }
+//  Object.assign(person, new PersonDetails(90, 'mumbai'));
+//  console.log(person);
+ 
+let Person = {
+    name: 'suresh',
+
+};
+ let Person2 = {
+    name: 'ramesh',
+ };
+
+ function myFunction3(age, city) {
+    this.age = age;
+    this.city = city;
+ }
+
+ let myBind = myFunction3.bind(Person2, 24, 'pune');
+
+ myBind();
+console.log(myBind);
+console.log(Person2);
+
+let person3 = {
+    name: 'saad gaon boy',
+
+};
+class PersonDetails{
+    setDetails(age, city){
+        ((this.age = age), (this.city));
     }
 }
- Object.assign(person, new PersonDetails(90, 'mumbai'));
- console.log(person);
- 
+
+// we use here call
+let obj = new PersonDetails();
+console.log(obj);
+
+
+
+
 
 
 
