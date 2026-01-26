@@ -52,7 +52,7 @@ function dataAppend(value) {
     img.src = el.image;
     title.innerText = el.title;
     description.innerText = el.description;
-    price.innerText = ₹ ${el.price};
+    price.innerText = `₹ ${el.price}`;
     category.innerText = el.category;
     addBtn.innerText = "Add";
 
@@ -67,7 +67,8 @@ function dataAppend(value) {
         qty.innerText = existingProduct.qty;
 
     }
-    addBtn.addEventListener('click'), () => {
+    addBtn.addEventListener('click', () => {
+
         addBtn.style = 'display:none';
         plusBtn.style = 'display:inline-block';
         qty.style = 'display:inline-block';
