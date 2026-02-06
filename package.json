@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/Emteyaj-Ahamad7827/front-end-development/issues"
   },
-  "homepage": "https://github.com/Emteyaj-Ahamad7827/front-end-development#readme"
+  "homepage": "https://github.com/Emteyaj-Ahamad7827/front-end-development#readme",
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-scripts": "^5.0.1"
+  }
 }
