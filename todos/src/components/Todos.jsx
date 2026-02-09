@@ -1,10 +1,111 @@
-export const Todos = ({ props}) => {
-    const { todo } = props;
-    console.log('todo: in list comp', todo);
-    return (
-        <>
-         <h1>list of todos</h1>
-        </>
+import { useState } from 'react';
+
+export const Todos = ({ props }) => {
+  const [editText, setEditText] = useState('');
+
+  const { todo, setTodo } = props;
+
+  const handleDelete = (id) => {
+    const deleteItems = todo.filter((el) => el.id !== id);
+    setTodo(deleteItems);
+  };
+
+  const handleEdits = (id) => {
+    const editItems = todo.map((el) =>
+      el.id === id ? { ...el, isEdit: true } : el,
     );
-    
+    setTodo(editItems);
+  };
+  const handleSelect = (id) => {
+    const handleSelectItems = todo.sel
+  }
+
+  const handleCancel = (id) => {
+    const editItems = todo.map((el) =>
+      el.id === id ? { ...el, isEdit: false } : el,
+    );
+    setTodo(editItems);
+  };
+
+  const handleConfirm = (id) => {
+    if (editText.trim() === '') return;
+    const editItems = todo.map((el) =>
+      el.id === id ? { ...el, isEdit: false, text: editText } : el,
+    );
+    setTodo(editItems);
+  };
+  return (
+    <>
+      <h1>list of todos</h1>
+
+      {/* {
+        todo && 
+      } */}
+
+      {todo.map((el) => {
+        return (
+          <div
+            key={el.id}
+            style={{
+              width: '80%',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              margin: 'auto',
+            }}
+          >
+            <input type="checkbox" />
+
+            {el.isEdit ? (
+              <input
+                name="edit_items"
+                type="text"
+                defaultValue={el.text}
+                onChange={(e) => setEditText(e.target.value)}
+              />
+            ) : (
+              <h1>{el.text}</h1>
+            )}
+
+            {el.isEdit ? (
+              <>
+                <button
+                  onClick={() => handleCancel(el.id)}
+                  style={{ height: 'fit-content' }}
+                >
+                  cancel
+                </button>
+                <button
+                  onClick={() => handleConfirm(el.id)}
+                  style={{ height: 'fit-content' }}
+                >
+                  confirm
+                </button>
+              </>
+            ) : (
+              <>
+              <button
+               onClick={() => handleSelect(el.id)} 
+               style={{height: 'fit-content' }} >
+                select
+              </button>
+                <button
+                  onClick={() => handleEdits(el.id)}
+                  style={{ height: 'fit-content' }}
+                >
+                  edit
+                </button>
+                <button
+                  onClick={() => handleDelete(el.id)}
+                  style={{ height: 'fit-content' }}
+                >
+                  delete
+                </button>
+              </>
+            )}
+          </div>
+        );
+      })}
+    </>
+  );
 };
