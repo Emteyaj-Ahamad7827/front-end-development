@@ -14,6 +14,7 @@ export const TodoInput = () => {
             text,
             isEdits: false,
             isCompleted: false,
+            
         };
 
         setTodo((prev) => [...prev, data]);
