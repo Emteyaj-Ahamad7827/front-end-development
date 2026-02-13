@@ -67,7 +67,7 @@ export const Todos = ({ props }) => {
     const unPin_value = todo.filter((el) => el.id !== id);
     setTodo(unPin_value);
   };
-  if (todo.length === 0) {
+  if (todo.length === 0 && pinItems.length === 0) {
     return <h1>No Data</h1>
   }
 
@@ -141,7 +141,7 @@ export const Todos = ({ props }) => {
                 </button>
               </>
             )}
-            <button onClick={() => handlePinItems(el.id)}>pin</button>
+            
           </div>
         );
       })}
@@ -209,6 +209,7 @@ export const Todos = ({ props }) => {
                 </button>
               </>
             )}
+            <button onClick={() => handlePinItems(el.id)}>pin</button>
           </div>
         );
       })}
