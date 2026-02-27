@@ -4,13 +4,13 @@ import { CounterValContext } from '../Context/CounterContext';
 import { Button } from '../Components/Button';
 import { data } from "react-router-dom";
 
-export const Counter = () = {
+export const Counter = () => {
     const { count, setCount} = useContext(CounterValContext);
     const handleInc = () => {
-        setCount((prev) => +1);
+        setCount((prev) => prev+1);
     };
     const handleDec = () => {
-        setCount((prev) => -1);
+        setCount((prev) => prev -1);
     };
     const handleRes = () => {
         setCount(() => 0);

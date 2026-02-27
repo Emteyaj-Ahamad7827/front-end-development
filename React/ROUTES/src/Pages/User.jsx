@@ -31,7 +31,7 @@ export const User = () => {
   const [page, setPage] = React.useState(initialPage);
 
   React.useEffect(() => {
-    getData(/users?page=${page})
+    getData(`/users?page=${page}`)
       .then((res) => {
         setError(false);
         setLoading(true);
@@ -40,7 +40,7 @@ export const User = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.log('🚀 ~ err:', err);
+        console.log('err:', err);
         setError(true);
       });
   }, [page]);
@@ -73,7 +73,7 @@ export const User = () => {
                 gap: '1rem',
               }}
               key={items.id}
-              to={/users/${items.id}}
+              to={`/users/${items.id}`}
             >
               <img src={items.avatar} alt={items.first_name} />
               <span>{items.id}</span>

@@ -1,11 +1,13 @@
 import { data, NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
-    const dat = [
+    const data = [
         {to: '/', name: 'home'},
         {to: '/about', name: 'about'},
         {to: '/counter', name: 'counter'},
         {to: '/todo', name: 'todo'},
+        {to: '/user', name: 'user'},
+        {to: '/login', name: 'login'},
     ];
 
     return (

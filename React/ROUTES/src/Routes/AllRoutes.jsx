@@ -17,7 +17,7 @@ export const AllRoutes = () => {
         <Route path="/todo" element={<Todo />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route
-          path="/users"
+          path="/user"
           element={
             <PrivateRoutes>
               <User />

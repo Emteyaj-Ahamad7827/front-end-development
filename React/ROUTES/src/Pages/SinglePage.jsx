@@ -12,7 +12,7 @@ export const SinglePage = () => {
   const [singleData, setSingleData] = React.useState({});
 
   React.useEffect(() => {
-    getData(/users/${params.paramId})
+    getData(`/users/${params.paramId}`)
       .then((res) => {
         setError(false);
         setLoading(true);
@@ -49,7 +49,7 @@ export const SinglePage = () => {
           gap: '1rem',
         }}
         key={singleData.id}
-        to={/users/${singleData.id}}
+        to={`/users/${singleData.id}`}
       >
         <img src={singleData.avatar} alt={singleData.first_name} />
         <span>{singleData.id}</span>
