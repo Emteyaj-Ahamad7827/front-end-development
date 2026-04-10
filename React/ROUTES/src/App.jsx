@@ -10,5 +10,5 @@ export const App = () => {
     <Navbar />
     <AllRoutes />
     </>
-  );
+  )
 };

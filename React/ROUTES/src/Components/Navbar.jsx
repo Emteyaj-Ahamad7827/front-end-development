@@ -6,6 +6,8 @@ export const Navbar = () => {
         {to: '/about', name: 'about'},
         {to: '/counter', name: 'counter'},
         {to: '/todo', name: 'todo'},
+        {to: '/user', name: 'user'},
+        {to: '/login', name: 'login'},
     ];
 
     return (
