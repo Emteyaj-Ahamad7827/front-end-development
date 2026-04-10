@@ -1,7 +1,7 @@
-import { data, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 export const Navbar = () => {
-    const dat = [
+    const data = [
         {to: '/', name: 'home'},
         {to: '/about', name: 'about'},
         {to: '/counter', name: 'counter'},
