@@ -8,17 +8,10 @@ export const Counter = () => {
     const { count, setCount} = useContext(CounterValContext);
 
     const handleInc = () => {
-<<<<<<< HEAD
-        setCount((prev)  => prev + 1);
-    };
-    const handleDec = () => {
-        setCount((prev) => prev - 1);
-=======
         setCount((prev) => prev+1);
     };
     const handleDec = () => {
         setCount((prev) => prev -1);
->>>>>>> 06326368078f506e21cf0440fc0a961769c15993
     };
     const handleRes = () => {
         setCount(() => 0);

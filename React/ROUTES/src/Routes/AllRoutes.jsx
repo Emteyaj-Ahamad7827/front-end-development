@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { Counter } from './../Pages/Counter';
-import { Todo } from './../Pages/Todo';
-import { About } from '../Pages/About';
-import { Home } from "../Pages/Home";
-
-export const AllRoutes = () => {
-    return (
-        <>
-        <Routes>
-=======
 import { Route, Routes } from 'react-router-dom';
 import { Home } from './../Pages/Home';
 import { Counter } from './../Pages/Counter';
@@ -23,16 +12,10 @@ export const AllRoutes = () => {
   return (
     <>
       <Routes>
->>>>>>> 06326368078f506e21cf0440fc0a961769c15993
         <Route path="/" element={<Home />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/todo" element={<Todo />}></Route>
         <Route path="/about" element={<About />}></Route>
-<<<<<<< HEAD
-        </Routes>
-        </>
-    );
-=======
         <Route
           path="/user"
           element={
@@ -53,5 +36,4 @@ export const AllRoutes = () => {
       </Routes>
     </>
   );
->>>>>>> 06326368078f506e21cf0440fc0a961769c15993
 };
