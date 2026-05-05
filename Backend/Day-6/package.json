@@ -1,0 +1,16 @@
+{
+  "name": "day-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "timeTakenMiddleware.js",
+  "scripts": {
+    "server": "nodemon timeTakenMiddleware.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
