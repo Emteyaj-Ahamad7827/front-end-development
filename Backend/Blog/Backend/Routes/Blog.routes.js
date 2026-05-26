@@ -15,15 +15,15 @@ blogRoutes.get('/', (req, res) => {
 
 // /blog/createBlog
 
-blogRoutes.use('/createBlog', createBlog);
+blogRoutes.post('/createBlog', createBlog);
 
 // /blog/deleteBlog
-blogRoutes.use('/deleteBlog', deleteBlog);
+blogRoutes.delete('/deleteBlog/:_id', deleteBlog);
 
 // /blog/updateOneBlog
-blogRoutes.use('/updateOneBlog', updateOneBlog);
+blogRoutes.patch('/updateOneBlog/:id', updateOneBlog);
 
 // /blog/updateManyBlog
-blogRoutes.use('/updateManyBlog', updateManyBlog);
+blogRoutes.put('/updateManyBlog', updateManyBlog);
 
 export { blogRoutes };

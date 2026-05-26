@@ -4,9 +4,8 @@ const blogSchema = mongoose.Schema(
   {
     title: String,
     discription: String,
-    // img pending [ multer explaination require]
-    category: String, // sort by
-    rating: Number, // filter by
+    category: String,
+    rating: Number,
   },
   {
     versionKey: false,
