@@ -3,15 +3,17 @@ import express from 'express';
 import {
   createBlog,
   deleteBlog,
-  updateManyBlog,
   updateOneBlog,
+  getBlog,
+  singleBlog,
 } from '../Controller/blogData.js';
+import { blogModel } from '../model/Blog.model.js';
 
 const blogRoutes = express.Router();
 
-blogRoutes.get('/', (req, res) => {
-  res.send("all blog's");
-});
+// single blog => /blog/id
+
+blogRoutes.get('/:id', singleBlog);
 
 // /blog/createBlog
 
@@ -24,6 +26,9 @@ blogRoutes.delete('/deleteBlog/:_id', deleteBlog);
 blogRoutes.patch('/updateOneBlog/:id', updateOneBlog);
 
 // /blog/updateManyBlog
-blogRoutes.put('/updateManyBlog', updateManyBlog);
+// blogRoutes.put('/updateManyBlog', updateManyBlog);
+
+// /blog/getBlog
+blogRoutes.post('/getBlog', getBlog);
 
 export { blogRoutes };
