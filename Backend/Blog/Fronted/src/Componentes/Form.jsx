@@ -40,7 +40,7 @@ export const Form = ({ props }) => {
 
       if (formCheck) {
         let res = await blogApi.post(`/user${location.pathname}`, form);
-        console.log(`🚀 ~ res:`, res.data);
+        console.log(`res:`, res.data);
         dispatch(LoginData(res.data));
         // if (Object.keys(res.data).includes('token')) {
         // }
