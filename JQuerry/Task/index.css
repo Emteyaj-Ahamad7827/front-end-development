@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputSection {
+  width: 500px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#inputSection input {
+  width: 75%;
+  padding: 12px;
+  font-size: 18px;
+  border: 2px solid #2575fc;
+  border-radius: 8px;
+  outline: none;
+}
+
+#inputSection input:focus {
+  border-color: #6a11cb;
+}
+
+#btn {
+  width: 20%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2575fc;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#btn:hover {
+  background: #1d63d8;
+  transform: scale(1.05);
+}
+
+#data {
+  margin-top: 25px;
+}
+
+.child_Data,
+[class^="child_Data_"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,.15);
+  animation: slideDown .3s ease;
+}
+
+.child_Data h2,
+[class^="child_Data_"] h2 {
+  font-size: 20px;
+  color: #333;
+  word-break: break-word;
+  width: 55%;
+}
+
+.ets,
+.del {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: .3s;
+}
+
+.ets {
+  background: #28a745;
+}
+
+.ets:hover {
+  background: #1f8a38;
+  transform: scale(1.05);
+}
+
+.del {
+  background: #dc3545;
+}
+
+.del:hover {
+  background: #b52a37;
+  transform: scale(1.05);
+}
+
+.alert {
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width:600px) {
+
+  #inputSection {
+    width: 95%;
+  }
+
+  #inputSection input {
+    width: 68%;
+  }
+
+  #btn {
+    width: 28%;
+  }
+
+  .child_Data,
+  [class^="child_Data_"] {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .child_Data h2,
+  [class^="child_Data_"] h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ets,
+  .del {
+    width: 100%;
+  }
+}

@@ -1,0 +1,85 @@
+
+let DataBase = JSON.parse(localStorage.getItem("todo")) || [];
+let editIndex = -1;
+
+$(function () {
+
+    function render() {
+        $("#data").html("");
+
+        if (DataBase.length === 0) {
+            $("#data").append("<h2 class='alert'>No Data 🤡</h2>");
+            return;
+        }
+
+        DataBase.forEach((item, index) => {
+            $("#data").append(`
+                <div class="child_Data" data-index="${index}">
+                    <h2>${item}</h2>
+                    <button class="ets">Edit</button>
+                    <button class="del">Delete</button>
+                </div>
+            `);
+        });
+    }
+
+    render();
+
+    // Create & Update
+    $("#btn").click(function () {
+
+        const text = $("#todoText").val().trim();
+
+        if (text === "") {
+            alert("Please enter something.");
+            return;
+        }
+
+        if ($(this).text() === "update") {
+
+            DataBase[editIndex] = text;
+
+            localStorage.setItem("todo", JSON.stringify(DataBase));
+
+            $("#btn").text("add");
+            $("#todoText").val("");
+            editIndex = -1;
+
+            render();
+            return;
+        }
+
+        DataBase.push(text);
+
+        localStorage.setItem("todo", JSON.stringify(DataBase));
+
+        $("#todoText").val("");
+
+        render();
+    });
+
+    // Delete
+    $(document).on("click", ".del", function () {
+
+        const index = $(this).parent().data("index");
+
+        DataBase.splice(index, 1);
+
+        localStorage.setItem("todo", JSON.stringify(DataBase));
+
+        render();
+
+    });
+
+    // Edit
+    $(document).on("click", ".ets", function () {
+
+        editIndex = $(this).parent().data("index");
+
+        $("#todoText").val(DataBase[editIndex]);
+
+        $("#btn").text("update");
+
+    });
+
+});

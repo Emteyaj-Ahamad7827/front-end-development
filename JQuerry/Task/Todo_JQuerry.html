@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <style>
+    <link rel="stylesheet" href="./index.css">
+    <!-- <style>
       .child_Data {
         display: flex;
         justify-content: space-evenly;
@@ -38,7 +39,7 @@
         width: fit-content;
         text-align: center;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <div id="inputSection">
@@ -81,7 +82,12 @@
           $('#data').find('.alert').remove();
         }
 
-        const text = $('#todoText');
+
+        // const texts = $("#todoText").val.trim();
+        // if (texts === "") {
+        //   alert("please enter something");
+        //   render;
+        // }
 
         if ($(this).text() === 'update') {
           editContainer.find('h2').text(text.val());
@@ -136,3 +142,4 @@
     });
   </script>
 </html>
+
